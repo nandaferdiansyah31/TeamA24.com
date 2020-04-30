@@ -1,0 +1,554 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins';
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: rgb(189, 129, 230);
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto !important;
+}
+
+li {
+  list-style: none !important;
+}
+
+/* Navbar */
+/* Desktop view */
+a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  float: left;
+  background: #f5f5f5;
+  
+}
+
+header a {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.brand-logo {
+  float: left;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.brand-logo span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.navigation {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin-right: 25px;
+  float: right;
+}
+
+.navigation li {
+  list-style: none;
+  float: left;
+}
+
+.navigation li a {
+  color: #8d8d8d;
+  padding: 28px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.show-menu-btn, .hide-menu-btn {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu-btn {
+  margin-right: 25px;
+  float: right;
+}
+
+.navigation a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+  color: black;
+  font-weight: 700;
+}
+
+#toggle-btn {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+/* btt */
+#btt {
+  display: inline-block;
+  background: #969696;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#btt .show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#btt::after {
+  content: "\f077";
+  font-family: "Font Awesome 5\ Free";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: white;
+}
+
+/* end of btt */
+/* end of navbar  */
+/* home */
+#home {
+  padding: 0 30px;
+}
+
+.top-wrapper {
+  padding: 10px 0;
+}
+
+.top-wrapper .grid-top-wrapper {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 20px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "grid-kiri grid-kanan";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-top-wrapper .grid-kiri {
+  grid-area: grid-kiri;
+}
+
+.grid-kiri ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1.25rem;
+}
+
+
+.grid-top-wrapper .grid-kanan {
+  grid-area: grid-kanan;
+}
+
+.grid-kanan img {
+  float: right;
+  height: 650px;
+}
+
+.btn-service {
+  display: block;
+  width: 100px;
+  margin: 1rem 0 10px 0;
+  padding: 5px;
+  color: #1a222c;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+  transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+}
+
+.btn-service:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* bagian bawah home */
+#platform {
+  margin-top: 30px;
+  background-color: #f5f5f5;
+  padding-bottom: 3rem;
+}
+.platform-text {
+  max-width: 900px;
+  margin: auto;
+  padding-right: 25px;
+  padding-bottom: 80px;
+  padding-left: 25px;
+  text-align: center;
+}
+#welcome {
+  margin-top: 30px;
+  background-color: #f5f5f5;
+  padding-bottom: 3rem;
+}
+
+.welcome-text {
+  max-width: 900px;
+  margin: auto;
+  padding-right: 25px;
+  padding-bottom: 80px;
+  padding-left: 25px;
+  text-align: center;
+}
+.btn-daftar {
+  display: block;
+  width: 130px;
+  margin-top: 15px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  color: #1a222c;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+  transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+}
+
+.btn-daftar:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* bagian akhirnya */
+
+/* bagian daftar kelas online */
+#kelas {
+  margin-top: 30px ;
+  padding: 0 30px;
+  background-color: #f5f5f5;
+  
+}
+
+#kelas .our-kelas {
+  margin-top: 30px;
+  padding-bottom: 1rem;
+}
+
+.our-kelas ul {
+  text-align: center;
+}
+
+.our-kelas ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.cards {
+  margin-top: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.btn-join {
+  display: block;
+  width: 170px;
+  margin-top: 1px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  color: #1a222c;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+  transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+}
+
+.btn-join:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.cards_item {
+  padding: 0 1rem 1.875rem 0;
+
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.card_content {
+  width: 320px;
+  height: 350px;
+  padding: 1rem;
+}
+
+.card_image {
+  padding-top: 3rem;
+}
+
+.card_image img {
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 7px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.card_title {
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.card_text {
+  color: black;
+  line-height: 1.5;
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+}
+/*bagian akhir menu kelas online */
+
+/* call us hehe */
+#hubungi {
+  margin-top: 50px;
+  background-color: #f5f5f5;
+  padding-bottom: 3rem;
+}
+
+.konten-text {
+  max-width: 900px;
+  margin: auto;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+.keranjang-gallery ul {
+  text-align: center;
+}
+
+.gallery-kami {
+  display: table;
+  margin: auto;
+}
+
+.gallery-kami p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.gallery-kami ul {
+  margin-top: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-kami li {
+  margin-left: 7px;
+  margin-right: 7px;
+  display: inline-block !important;
+}
+
+.gallery-kami li img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  padding: 1px;
+}
+
+.gallery-kami li p {
+  padding-top: 5px;
+}
+.konten-textbawah {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 90px;
+  padding-right: 25px;
+  padding-bottom: 120px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+
+/* akhiran call us hehe */
+
+/* makasih */
+
+#thankyou-wrapper {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: rgb(83, 139, 241);
+  text-align: center;
+}
+.heading {
+  color: black;
+}
+.heading h1 {
+  font-family: 'Roboto Slab';
+  font-size: 30px;
+  letter-spacing: 7px;
+  margin-bottom: 5px;
+  margin-top: 45px;
+}
+.heading h2 {
+  font-family: 'Roboto Slab';
+  font-size: 25px;
+  letter-spacing: 7px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.dts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.progate {
+  flex: auto;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+.desc-icon .img1 {
+  height: 80px;
+  width: 170px;
+}
+
+.desc-icon .img2 {
+  height: 95px;
+  width: 102.5px;
+}
+
+.txt-contents {
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin: auto
+
+  font-size: 15px;
+  color: black;
+}
+
+.divider-custom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: black;
+  border-radius: 1rem;
+  border-color: black;
+}
+
+.divider-custom .divider-custom-icon {
+  color: black;
+  font-size: 2rem;
+  margin: 10px 10px;
+}
+
+/*horeee akhirnya footerrrrr */
+footer {
+  background-color: #f1f1f1;
+}
+.footer-logokanan {
+  float: right;
+  font-size: 20px;
+  padding-top: 8x;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.footer-logokiri {
+  float: left;
+  font-size: 20px;
+  padding-top: 8x;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.text-footer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 16px;
+}
+
+.text-footer a:hover {
+  font-weight: bold;
+}
+
+footer ul {
+  display: inline-block;
+  margin: 0;
+}
+
+footer li {
+  float: left;
+}
