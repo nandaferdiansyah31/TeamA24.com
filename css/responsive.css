@@ -2,9 +2,79 @@
   .grid-kanan img {
     max-width: 100%;
   }
+  .brand-logo {
+    font-size: 12px;
+    padding-top: 20px;
+    margin-top: 5px;
+  }
 }
 
-/* smartpun */
+/*tablet */
+@media (max-width: 770px) {
+  .grid-kanan img {
+    max-width: 100%;
+    max-height: -100%;
+  }
+  .show-menu-btn, .hide-menu-btn {
+    display: block;
+  }
+  .show-menu-btn {
+    margin-top: 20px;
+  }
+  .navigation {
+    position: fixed;
+    width: 100%;
+    background: #f5f5f5;
+    top: -110%;
+    left: 0;
+    padding: 60px 0px 50px 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .navigation li {
+    width: 100%;
+  }
+  .navigation li a {
+    padding: 15px 15px;
+    text-align: center;
+  }
+  .navigation li a i {
+    width: auto;
+    font-size: 20px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+  }
+  .brand-logo {
+    font-size: 12px;
+    padding-top: 20px;
+    margin-top: 5px;
+  }
+  #toggle-btn:checked ~ nav .navigation {
+    top: 0px;
+  }
+  .top-wrapper .tengah {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .btn-service {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tengah ul {
+    display: inline-block;
+    margin: 0;
+    zoom: 1;
+    *display: inline;
+  }
+  .tengah li {
+    float: left;
+  }
+}
+/* HAPEEEE */
 @media (max-width: 670px) {
   .show-menu-btn, .hide-menu-btn {
     display: block;
@@ -39,7 +109,9 @@
     right: 35px;
   }
   .brand-logo {
-    padding-top: 27px;
+    font-size: 12px;
+    padding-top: 20px;
+    margin-top: 5px;
   }
   #toggle-btn:checked ~ nav .navigation {
     top: 0px;
@@ -56,7 +128,6 @@
   .tengah ul {
     display: inline-block;
     margin: 0;
-    /* For IE, the outcast */
     zoom: 1;
     *display: inline;
   }
@@ -74,6 +145,9 @@
   .grid-top-wrapper .grid-kanan {
     display: none;
   }
+  .text-footer {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -83,6 +157,11 @@
   }
   .card_title {
     padding-top: 2rem;
+  }
+  .brand-logo {
+    font-size: 12px;
+    padding-top: 20px;
+    margin-top: 5px;
   }
   .card_content {
     margin-left: auto;
@@ -99,6 +178,9 @@
   #btt {
     display: none !important;
   }
+  .text-footer {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -106,5 +188,7 @@
     width: 100%;
     height: auto;
   }
+  .text-footer {
+    font-size: 10px;
+  }
 }
-/*# sourceMappingURL=responsive.css.map */
