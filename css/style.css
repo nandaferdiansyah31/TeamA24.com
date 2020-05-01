@@ -326,7 +326,7 @@ header a {
 
 .card_content {
   width: 320px;
-  height: 350px;
+  height: 305px;
   padding: 1rem;
 }
 
@@ -485,7 +485,7 @@ header a {
 .txt-contents {
   letter-spacing: 1px;
   line-height: 25px;
-  margin: auto
+  margin: auto;
 
   font-size: 15px;
   color: black;
